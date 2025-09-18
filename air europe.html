@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Europe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #0b0e14;
+      color: #fff;
+    }
+
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Шапка */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 24px;
+      color: red;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .phone {
+      font-weight: bold;
+    }
+
+    /* Баннер */
+    .hero {
+      background: url('images/banner.jpg') no-repeat center center/cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-content {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .title {
+      font-size: 36px;
+      animation: fadeInDown 1s ease;
+    }
+
+    /* Анимация заголовка */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Кнопки */
+    .btn {
+      margin-top: 15px;
+      display: inline-block;
+      background: red;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: darkred;
+      transform: scale(1.05);
+    }
+
+    /* Горящие туры */
+    .tours {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Новости и акции */
+    .news {
+      padding: 50px 0;
+    }
+
+    .news-blocks {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .news-item {
+      background: #222;
+      padding: 10px;
+      border-radius: 10px;
+      flex: 1 1 45%;
+      box-sizing: border-box;
+    }
+
+    .news-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* О нас */
+    .about {
+      padding: 60px 0;
+      background: #111;
+      color: white;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-content img {
+      width: 400px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .about-text h2 {
+      margin-top: 0;
+      font-size: 32px;
+      animation: fadeInLeft 1s ease;
+    }
+
+    .about-text p {
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    /* Анимация для "О нас" */
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Подвал */
+    footer {
+      padding: 20px 0;
+      text-align: center;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- Шапка -->
+    <header class="header">
+      <div class="logo">Air Europe</div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Туры</a></li>
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="phone">8 800 535 35 35</div>
+    </header>
+
+    <!-- Баннер -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="title">Авторские туры по Европе</h1>
+        <a href="#" class="btn">Подробнее</a>
+      </div>
+    </section>
+
+    <!-- Горящие туры -->
+    <section class="tours">
+      <h2>Горящие туры 🔥</h2>
+      <ul class="cards">
+        <li class="card">
+          <img src="123.webp" alt="Испания">
+          <h3>Испания</h3>
+          <p>Пляжи, экскурсии и восточная кухня</p>
+          <a class="btn" href="#">Смотреть</a>
+        </li>
+        <li class="card">
+          <img src="1234.webp" alt="Франция">
+          <h3>Франция</h3>
+          <p>Природа, водопады и серфинг</p>
+          <a class="btn" href="#">Смотреть</a>
+        </li>
+        <li class="card">
+          <img src="12345.webp" alt="Индонезия">
+          <h3>Греция</h3>
+          <p>Острова, туризм и традиции</p>
+          <a class="btn" href="#">Смотреть</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Новости и акции -->
+    <section class="news">
+      <h2>Новости и акции</h2>
+      <div class="news-blocks">
+        <div class="news-item">
+          <img src="images/sale1.jpg" alt="Новогодняя акция">
+          <p>Дешевые путевки на Новый Год!</p>
+        </div>
+        <div class="news-item">
+          <img src="images/sale2.jpg" alt="Серфинг">
+          <p>Акции для серферов и экстремалов</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+      <p>© 2025 Air Europe</p>
+    </footer>
+
+  </div>
+</body>
+</html>
